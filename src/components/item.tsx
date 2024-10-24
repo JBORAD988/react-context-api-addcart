@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { CartContext } from "../context/cart";
+import React from "react";
+import { useCart } from "../context/cart";
 
 interface ItemProps {
     name: string;
@@ -7,7 +7,7 @@ interface ItemProps {
 }
 
 export const Item = (props: ItemProps) => {
-    const cartList = useContext(CartContext);
+    const cartList = useCart();
 
     const data = props;
 

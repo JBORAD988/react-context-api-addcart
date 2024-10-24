@@ -11,6 +11,14 @@ interface CartProviderProps {
     children: React.ReactNode;
 }
 
+
+export const useCart = () => {
+    const cart = React.useContext(CartContext);
+    return cart;
+}
+
+
+
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     const [cart, setCart] = useState<Array<{  name: string; price: number }>>([]); 
 
